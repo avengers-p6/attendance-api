@@ -1,0 +1,10 @@
+[Unit]
+Description=Gunicorn instance to serve your application
+After=network.target
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/attendance-api
+ExecStart=gunicorn app:app --log-config log.conf -b 0.0.0.0:8090
+[Install]
+WantedBy=multi-user.targetCreate an AMI from the running instance, which will serve as the base image for your auto-scaling instances.
