@@ -4,7 +4,7 @@ After=network.target
 [Service]
 User=ubuntu
 Group=ubuntu
-WorkingDirectory=/home/ubuntu/OT-Attendance
+WorkingDirectory=/home/ubuntu/attendance-api
 ExecStart=gunicorn app:app --log-config log.conf -b 0.0.0.0:8090
 [Install]
 WantedBy=multi-user.target
