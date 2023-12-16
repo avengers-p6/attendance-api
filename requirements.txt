@@ -7,3 +7,4 @@ pip install peewee
 pip install flasgger
 pip install prometheus_flask_exporter
 pip install flask-cors
+pip install python-json-logger
